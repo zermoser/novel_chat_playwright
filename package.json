@@ -1,0 +1,12 @@
+{
+  "name": "0004_Novel_chat_playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "zermoser <kittipoj.na@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.2.1"
+  },
+  "scripts": {}
+}
