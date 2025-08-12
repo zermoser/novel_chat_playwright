@@ -1,5 +1,5 @@
 {
-  "name": "0004_Novel_chat_playwright",
+  "name": "NovelChatPlaywright",
   "version": "1.0.0",
   "main": "index.js",
   "author": "zermoser <kittipoj.na@gmail.com>",
@@ -8,5 +8,8 @@
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.2.1"
   },
-  "scripts": {}
+  "scripts": {
+    "gen": "yarn playwright codegen https://zermoser.github.io/mos_novel_chat/",
+    "test": "yarn playwright test"
+  }
 }

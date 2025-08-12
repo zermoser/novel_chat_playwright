@@ -1,18 +1,35 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
-
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+test('ทดสอบ Novel Chat', async ({ page }) => {
+  await page.goto('https://zermoser.github.io/mos_novel_chat/');
+  await page.getByTestId('message-input').click();
+  await page.getByTestId('message-input').fill('สวัสดีครับ');
+  await page.getByTestId('send-button').click();
+  await page.getByTestId('next-character-button').click();
+  await page.getByTestId('message-input').click();
+  await page.getByTestId('message-input').fill('สวัสดีค่ะ');
+  await page.getByTestId('send-button').click();
+  await page.getByTestId('next-character-button').click();
+  await page.getByTestId('message-input').click();
+  await page.getByTestId('message-input').fill('ชาย หญิง พบกันในบริษัทแห่งหนึ่ง');
+  await page.getByTestId('send-button').click();
+  await page.getByTestId('next-character-button').click();
+  await page.getByTestId('message-input').click();
+  await page.getByTestId('message-input').fill('ผมจำมานำเสนอเครื่องมือที่ชื่อว่า Playwright');
+  await page.getByTestId('send-button').click();
+  await page.getByTestId('settings-button').click();
+  await page.getByTestId('add-character-button').click();
+  await page.getByTestId('character-name-input').click();
+  await page.getByTestId('character-name-input').fill('ตัวละครใหม่สุดเท่');
+  await page.getByTestId('character-personality-input').click();
+  await page.getByTestId('character-personality-input').fill('บุคลิกอ่อนโยนและเป็นมิตรมากๆ');
+  await page.getByTestId('save-character-button').click();
+  await page.getByTestId('close-settings-button').click();
+  await page.getByTestId('next-character-button').click();
+  await page.getByTestId('next-character-button').click();
+  await page.getByTestId('next-character-button').click();
+  await page.getByTestId('message-input').click();
+  await page.getByTestId('message-input').fill('ว้าว น่าสนใจมากเลยครับ');
+  await page.getByTestId('message-input').press('Enter');
+  await expect(page.getByText('ว้าว น่าสนใจมากเลยครับ')).toBeVisible();
 });
