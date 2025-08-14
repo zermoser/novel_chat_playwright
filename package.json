@@ -1,9 +1,9 @@
 {
-  "name": "NovelChatPlaywright",
+  "name": "novel-chat-playwright",
   "version": "1.0.0",
   "main": "index.js",
   "author": "zermoser <kittipoj.na@gmail.com>",
-  "license": "MIT",
+  "license": "Kittipoj",
   "devDependencies": {
     "@playwright/test": "^1.54.2",
     "@types/node": "^24.2.1"

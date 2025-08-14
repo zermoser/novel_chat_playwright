@@ -15,7 +15,7 @@ test('ทดสอบ Novel Chat', async ({ page }) => {
   await page.getByTestId('send-button').click();
   await page.getByTestId('next-character-button').click();
   await page.getByTestId('message-input').click();
-  await page.getByTestId('message-input').fill('ผมจำมานำเสนอเครื่องมือที่ชื่อว่า Playwright');
+  await page.getByTestId('message-input').fill('ผมจะมานำเสนอเครื่องมือที่ชื่อว่า Playwright');
   await page.getByTestId('send-button').click();
   await page.getByTestId('settings-button').click();
   await page.getByTestId('add-character-button').click();
